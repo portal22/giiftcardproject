@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-### **Assignment 1, Module 2: Auditing and Test Cases**
+### ** Auditing and Test Cases**
 
 This assignment focuses on understanding and improving the security of a C program (`giftcardreader.c`) and its accompanying header file (`giftcard.h`). You will audit the program, identify flaws, and create test cases to expose them. Additionally, you'll remediate the identified issues and implement regression tests to ensure the fixes persist.
 
@@ -167,12 +167,8 @@ As always, make sure you understand why we're doing this!
 3. Fixed source code with no crashes or hangs for the test cases.
 4. Updated test suite and GitHub Actions workflow for regression testing. 
    
-## What to Submit
 
-For ease of grading, we ask that you also submit copies of your writeups as part2.txt directly in Gradescope. Please ensure that these writeups are exact copies of the files from your repository, as we have implemented a check to verify the match. **It cannot be blank, this will cause a hash failure!**. For further details on the writeup requirements, please refer to the grading rubric available in Brightspace under the "Assignment Guideline" section.
-
-
-* Module 2
+**NOTES:
   * In `testcases/invalid`: `crash1.gft`, `crash2.gft`, and `hang.gft`.
   * A text file named `module2.txt` that contains the write-up on the bug descriptions
     for each of the three test cases. **Make sure to read through the example write-ups !**
@@ -180,12 +176,10 @@ For ease of grading, we ask that you also submit copies of your writeups as part
   * A commit with the fixed version of the code (if you like, this
     commit can also contain the files mentioned above)
 
-### Ready for Grading
 
-Note, this means we will start grading your report, only push tag once ready!
 =======
-# Assignment 1: Beware of Geeks Bearing Gift Cards
-# Module 1
+Beware of Geeks Bearing Gift Cards
+#
 
 ## Introduction
 
@@ -210,7 +204,7 @@ Your job isn't to focus on the lack of clarity. Your job is to understand, adapt
 * Document your reasoning
 * Build something that works, even when the original specifications feel like they were written in a foreign language
 
-This isn't just a coding assignment. This is learning to be resourceful, to ask the right questions of yourself, and to transform unclear requirements into working solutions. Embrace the uncertainty—it's where real learning happens. 
+This isn't just coding. This is learning to be resourceful, to ask the right questions of yourself, and to transform unclear requirements into working solutions. Embrace the uncertainty—it's where real learning happens. 
 
-We aren't heartless. Two of our very best engineers, Justin Cappos (JAC) and Brendan Dolan-Gavitt (BDG) have read through the code already and started making comments. Then, saw the disaster and bolted. It's a mess. We've tried to annotate a few places that look suspicious, but there's no doubt that there are many bugs lurking in this code. Make no mistake, this is *not* an example of C code that you want to imitate.
+We have read through the code already and started making comments. Then, saw the disaster and bolted. It's a mess. We've tried to annotate a few places that look suspicious, but there's no doubt that there are many bugs lurking in this code. Make no mistake, this is *not* an example of C code that you want to imitate.
 
