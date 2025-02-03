@@ -16,7 +16,7 @@ This assignment focuses on understanding and improving the security of a C progr
 
 ---
 
-### **Step 0: Pulling in Your Code**
+### **Step 0: Pulling in Your Code**  - DONE
 
 In this course, each module builds upon the work you completed in the previous module. This approach reinforces the importance of iterative development and allows you to refine your skills incrementally. The commands below are essential for integrating your progress from Module 1 into your current work. They ensure that you have access to the latest updates from your own repository so you can seamlessly continue with Module 2.
 
@@ -24,52 +24,8 @@ In this course, each module builds upon the work you completed in the previous m
 
 ### **Why Is This Done?**
 
-1. **Build on Previous Work**: 
-Each module assumes that you’ve completed the foundational tasks from the previous one. For instance, in Module 1, you set up your repository and implemented initial features. In Module 2, you will extend this by auditing the program, creating test cases, and implementing fixes.
-   
-2. **Version Control**: 
-Git allows you to track changes and manage updates to your code efficiently. By pulling your previous work, you maintain a synchronized development environment.
 
-3. **Collaboration Readiness**: 
-Even if you're working solo, you follow a similar workflow to collaborative projects, preparing you for real-world software development practices.
 
----
-
-### **Commands Explanation and Verification**
-
-The following commands will pull your Module 1 work into your current repository for Module 2. Let’s break them down:
-
-```bash
-git remote add upstream https://github.com/NYUAppSec__/assignmment1_module1-YOURMODULE11REPO
-```
-
-- **Purpose**: Adds the remote repository URL for Module 1 as an additional "upstream" source.
-- **Why?**: You need a way to fetch changes from your previous work, and this command links the repository for Module 1 to your current project.
-- **Check**: Ensure the URL `https://github.com/NYUAppSec__/assignmment1_module1-YOURMODULE11REPO` matches the repository for your Module 1 code. Replace `YOURMODULE11REPO` with your actual repository name.
-
-Note: **'NYUAppSec__' is course specific, check your path carefully!**
-
-```bash
-git fetch upstream
-```
-
-- **Purpose**: Downloads the changes from the `upstream` repository to your local Git environment.
-- **Why?**: This brings in the latest updates from Module 1 but does not automatically apply them yet.
-
-```bash
-git merge upstream/main --allow-unrelated-histories
-```
-
-- **Purpose**: Merges the `main` branch from your Module 1 repository into your current repository.
-- **Why?**: Since Module 1 and Module 2 repositories may have different histories, the `--allow-unrelated-histories` flag ensures that the merge proceeds without errors due to this difference.
-
-```bash
-git push
-```
-- **Purpose**: Uploads the merged changes to your remote repository for Module 2.
-- **Why?**: This ensures that your Module 2 repository reflects the updates from Module 1 and serves as your new starting point.
-
----
 
 ### **Important Notes**
 
@@ -95,7 +51,7 @@ As always, make sure you understand why we're doing this!
 
 2. **Diagram the Flow**
 
-   - Create a diagram or write a description showing how different parts of the code interact. This is not to submit, but part of a recommend process in understanding any type of codebase! Remember, you have to include a write-up as          part of this assignment!
+   - Create a diagram or write a description showing how different parts of the code interact. This is not to submit, but part of a recommend process in understanding any type of codebase! Remember, you have to include a write-up as part of this assignment!
 
 3. **Using the Makefile**
 
@@ -165,7 +121,6 @@ As always, make sure you understand why we're doing this!
      - Behavior observed during the crash/hang.
      - Steps to reproduce the issue.
      - Explain, clearly, why it works, what lines it addreses, how you found the error. Not knowing how to explain your findings will result in you having a very unpleasant time during your Assesment Quiz!
-     - Don't forget, we provided some examples of write-ups in BrightSpace for you to reference for guidance on what we're looking for. 
 ---
 
 ### **Step 3: Fix the Bugs**
@@ -182,9 +137,9 @@ As always, make sure you understand why we're doing this!
      - **Invalid Test Cases**: Inputs that should trigger error handling (but not crashes).
    - Update the test suite to include these cases.
 
-3. **Automate Testing**
+3. **Automate Testing**   - NOTE TO TUTOR  Make a copy of existing helllo.yml and edit the copy only!!!
    - Use **GitHub Actions** to ensure that future changes do not reintroduce bugs:
-     - Set up a workflow to automatically run `make test` after every code change.
+     - Set up a workflow to automatically run `make test` after every code change. - 
      - Ensure the workflow uses the updated test suite to verify the fixes.
 
 ---
@@ -214,34 +169,18 @@ As always, make sure you understand why we're doing this!
    
 ## What to Submit
 
-Please **only submit a file called `git_link.txt`** that contains the name of your repository to **Gradescope**.
-For example, if your repo is located at 'h<span>ttps:</span>//github.com/NYUAppSec__/assignment1-module2-exampleaccount', you would submit a text file named `git_link.txt` with one single line that contains <ins><b>only</b></ins> the following:
-
-    assignment1-module2-exampleaccount
-
-Remember that <b>Gradescope is not instant</b>. Especially if we have to look into past GitHub action runs. We have a timeout set for 10 minutes, almost all well running code will complete within 5 minutes. Wait for it to complete or timeout before trying to re-run. 
-
 For ease of grading, we ask that you also submit copies of your writeups as part2.txt directly in Gradescope. Please ensure that these writeups are exact copies of the files from your repository, as we have implemented a check to verify the match. **It cannot be blank, this will cause a hash failure!**. For further details on the writeup requirements, please refer to the grading rubric available in Brightspace under the "Assignment Guideline" section.
 
-Your repository should contain:    
-* Module 1
-  * Your `.github/workflows/hello.yml`
-  * At least one signed commit
+
 * Module 2
   * In `testcases/invalid`: `crash1.gft`, `crash2.gft`, and `hang.gft`.
   * A text file named `module2.txt` that contains the write-up on the bug descriptions
-    for each of the three test cases. **Make sure to read through the example write-ups in BrightSpace!**
+    for each of the three test cases. **Make sure to read through the example write-ups !**
   * A GitHub Actions YML that runs your tests
   * A commit with the fixed version of the code (if you like, this
     commit can also contain the files mentioned above)
 
 ### Ready for Grading
-
-Feel free to start submitting on gradescope to see how you would score. Once you want to lock in your grade push the `assign1mod2handin` tag with the following:
-
-    git tag -a -m "Completed assign1 module2." assign1mod2handin
-    git push origin main
-    git push origin assign1mod2handin
 
 Note, this means we will start grading your report, only push tag once ready!
 =======
@@ -275,58 +214,3 @@ This isn't just a coding assignment. This is learning to be resourceful, to ask 
 
 We aren't heartless. Two of our very best engineers, Justin Cappos (JAC) and Brendan Dolan-Gavitt (BDG) have read through the code already and started making comments. Then, saw the disaster and bolted. It's a mess. We've tried to annotate a few places that look suspicious, but there's no doubt that there are many bugs lurking in this code. Make no mistake, this is *not* an example of C code that you want to imitate.
 
-## Module 1: Setting up Your Environment
-
-### Using Git, GitHub, and getting setup
-
-Remember the work you did in Assignment 0 getting setup? In order to complete this assignment, you are required to use the git VCS (Version Control System). For a cheat-sheet of git commands, please see [this](https://github.com/nyutandononline/CLI-Cheat-Sheet/blob/master/git-commands.md). We will be spot checking your commit messages and/or git log (for all asssignments and modules), it is recommended that you write descriptive commit messages so that the evolution of your repository is easy to understand. For a guide to writing good commit messages, please read [this](https://chris.beams.io/posts/git-commit/) and the [Linux kernel's advice on writing good commit messages](https://git.kernel.org/pub/scm/git/git.git/tree/Documentation/SubmittingPatches?id=b23dac905bde28da47543484320db16312c87551#n134).
-
-The next step is to set up GitHub Actions to automatically build and test your code whenever you push a commit. You can find a [tutorial on GitHub Actions here](https://docs.github.com/en/actions/learn-github-actions/introduction-to-github-actions). You are welcome to use this C/C++ GitHub Actions CI template [here](https://github.com/actions/starter-workflows/blob/main/ci/c-cpp.yml). Take a moment to read what that template does, ensure that you understand 'checkout' in GitHub Actions as well, more info [here](https://github.com/actions/checkout).
-
-For now, you should set up GitHub Actions to just run the below (make sure it's exact!):
-
-```
-echo "Hello world"
-```
-
-Whenever a new commit is pushed to the repository, GitHub Actions will run, and in this case just echo "Hello world"!
-To do this, you'll create a file named `.github/workflows/hello.yml`with the correct commands in place.
-Check that the Action is running correctly in the GitHub interface.
-
-### Docker Environment Testing
-For consistent testing across systems, you can use Docker:
-
-```bash
-make container-test
-```
-
-This will execute the Docker commands defined in the Makefile:
-1. `docker build -t giftcard-tester .` - Builds a Docker image tagged as `giftcard-tester`.
-2. `docker run giftcard-tester` - Creates a containerized environment with all necessary dependencies and runs the test suite.
-3. Run the test suite in the container
-
-The container provides a consistent testing environment across different systems, ensuring that all tests run under the same conditions. This will set you up for Module 2 and 3!
-
-### Ready for Submission
-Make sure to tag this part, push the `assign1mod1handin` tag with the following:
-
-    git tag -a -m "Completed assign1 module1." assign1mod1handin
-    git push origin main
-    git push origin assign1mod1handin
-
-## What to Submit
-
-Please **only submit a file called `git_link.txt`** that contains the name of your repository to **Gradescope**.
-For example, if your repo is located at 'h<span>ttps:</span>//github.com/NYUAppSec__/assignment1-module1-exampleaccount', you would submit a text file named `git_link.txt` with one single line that contains <ins><b>only</b></ins> the following:
-
-    assignment1-module1-exampleaccount
-
-Remember that <b>Gradescope is not instant</b>. Especially if we have to look into past GitHub action runs. We have a timeout set for 10 minutes, almost all well running code will complete within 5 minutes. Wait for it to complete or timeout before trying to re-run. 
-
-Your repository should contain:
-
-* Part 1
-  * Your `.github/workflows/hello.yml`
-  * At least one signed commit
-
->>>>>>> upstream/main
